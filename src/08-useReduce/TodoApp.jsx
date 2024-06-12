@@ -1,14 +1,6 @@
 import { TodoAdd, TodoList } from "./components";
 import { useTodo } from "../hooks/useTodo";
 
-const initialState = [
-  // {
-  //   id: new Date().getTime(),
-  //   description: "Recolectar la piedra del alma",
-  //   done: false,
-  // },
-];
-
 export const TodoApp = () => {
   const {
     todos,
