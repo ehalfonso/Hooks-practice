@@ -6,17 +6,26 @@ export const TodoItem = ({ todo, onDelete, onToggle }) => {
       <span
         className={`align-self-center 
         ${todo.done ? "text-decoration-line-through" : ""}`}
+        aria-label="span1"
       >
         {todo.description}
       </span>
-      <span className="align-self-center">
+      <span className="align-self-center" aria-label="span2">
         {todo.done === true ? "Completed" : "Uncomplete"}
       </span>
       <div>
-        <button onClick={() => onToggle(todo.id)} className="btn btn-warning">
+        <button
+          onClick={() => onToggle(todo.id)}
+          className="btn btn-warning"
+          aria-label="toggle"
+        >
           Edit
         </button>
-        <button onClick={() => onDelete(todo.id)} className="btn btn-danger">
+        <button
+          onClick={() => onDelete(todo.id)}
+          className="btn btn-danger"
+          aria-label="delete"
+        >
           Delete
         </button>
       </div>
